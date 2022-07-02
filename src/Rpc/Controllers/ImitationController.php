@@ -2,7 +2,7 @@
 
 namespace ZnUser\Authentication\Rpc\Controllers;
 
-use App\User\Domain\Forms\AuthImitationForm;
+use ZnUser\Authentication\Domain\Forms\AuthImitationForm;
 use ZnCore\Domain\Entity\Helpers\EntityHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;

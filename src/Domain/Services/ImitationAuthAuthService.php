@@ -2,7 +2,7 @@
 
 namespace ZnUser\Authentication\Domain\Services;
 
-use App\User\Domain\Forms\AuthImitationForm;
+use ZnUser\Authentication\Domain\Forms\AuthImitationForm;
 use ZnUser\Authentication\Domain\Interfaces\Services\ImitationAuthServiceInterface;
 use Symfony\Component\Validator\Constraints\Email;
 use ZnCore\Base\Validation\Helpers\UnprocessableHelper;
