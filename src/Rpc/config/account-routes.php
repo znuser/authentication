@@ -1,6 +1,6 @@
 <?php
 
-use ZnUser\Authentication\Domain\Enums\Rbac\AppUserPermissionEnum;
+use ZnUser\Authentication\Domain\Enums\Rbac\AuthenticationPermissionEnum;
 use ZnUser\Authentication\Rpc\Controllers\AuthController;
 
 return [
@@ -9,7 +9,7 @@ return [
         'version' => '1',
         'is_verify_eds' => false,
         'is_verify_auth' => false,
-        'permission_name' => AppUserPermissionEnum::AUTHENTICATION_GET_TOKEN_BY_PASSWORD,
+        'permission_name' => AuthenticationPermissionEnum::AUTHENTICATION_GET_TOKEN_BY_PASSWORD,
         'handler_class' => AuthController::class,
         'handler_method' => 'getTokenByPassword',
         'status_id' => 100,
@@ -21,7 +21,7 @@ return [
         'version' => '1',
         'is_verify_eds' => false,
         'is_verify_auth' => false,
-        'permission_name' => AppUserPermissionEnum::AUTHENTICATION_GET_TOKEN_BY_PASSWORD,
+        'permission_name' => AuthenticationPermissionEnum::AUTHENTICATION_GET_TOKEN_BY_PASSWORD,
         'handler_class' => AuthController::class,
         'handler_method' => 'getToken',
         'status_id' => 100,

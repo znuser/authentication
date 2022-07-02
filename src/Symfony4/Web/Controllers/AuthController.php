@@ -4,7 +4,7 @@ namespace ZnUser\Authentication\Symfony4\Web\Controllers;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use ZnUser\Authentication\Domain\Enums\Rbac\AppUserPermissionEnum;
+use ZnUser\Authentication\Domain\Enums\Rbac\AuthenticationPermissionEnum;
 use ZnUser\Authentication\Domain\Enums\WebCookieEnum;
 use ZnUser\Authentication\Symfony4\Web\Enums\WebUserEnum;
 use DateTime;
@@ -63,10 +63,10 @@ class AuthController extends BaseWebController implements ControllerAccessInterf
     {
         return [
             'auth' => [
-                AppUserPermissionEnum::AUTHENTICATION_WEB_LOGIN,
+                AuthenticationPermissionEnum::AUTHENTICATION_WEB_LOGIN,
             ],
             'logout' => [
-                AppUserPermissionEnum::AUTHENTICATION_WEB_LOGOUT,
+                AuthenticationPermissionEnum::AUTHENTICATION_WEB_LOGOUT,
             ],
         ];
     }

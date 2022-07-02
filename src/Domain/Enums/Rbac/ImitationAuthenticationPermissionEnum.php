@@ -4,7 +4,7 @@ namespace ZnUser\Authentication\Domain\Enums\Rbac;
 
 use ZnCore\Base\Enum\Interfaces\GetLabelsInterface;
 
-class UserImitationPermissionEnum implements GetLabelsInterface
+class ImitationAuthenticationPermissionEnum implements GetLabelsInterface
 {
 
     public const IMITATION = 'oUserImitationImitation';

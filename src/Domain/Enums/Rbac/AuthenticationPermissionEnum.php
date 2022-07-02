@@ -4,7 +4,7 @@ namespace ZnUser\Authentication\Domain\Enums\Rbac;
 
 use ZnCore\Base\Enum\Interfaces\GetLabelsInterface;
 
-class AppUserPermissionEnum implements GetLabelsInterface
+class AuthenticationPermissionEnum implements GetLabelsInterface
 {
 
     const AUTHENTICATION_GET_TOKEN_BY_PASSWORD = 'oAuthenticationGetTokenByPassword';

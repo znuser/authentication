@@ -1,7 +1,7 @@
 <?php
 
 use ZnUser\Authentication\Rpc\Controllers\ImitationController;
-use ZnUser\Authentication\Domain\Enums\Rbac\UserImitationPermissionEnum;
+use ZnUser\Authentication\Domain\Enums\Rbac\ImitationAuthenticationPermissionEnum;
 
 return [
     [
@@ -9,7 +9,7 @@ return [
         'version' => '1',
         'is_verify_eds' => false,
         'is_verify_auth' => true,
-        'permission_name' => UserImitationPermissionEnum::IMITATION,
+        'permission_name' => ImitationAuthenticationPermissionEnum::IMITATION,
         'handler_class' => ImitationController::class,
         'handler_method' => 'imitation',
         'status_id' => 100,
