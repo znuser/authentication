@@ -15,7 +15,8 @@ return [
         TokenStorageInterface::class => \Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage::class,
 
         'ZnUser\Authentication\Domain\Interfaces\Services\TokenServiceInterface' => 'ZnUser\Authentication\Domain\Services\JwtTokenService',
-        'ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface' => 'ZnUser\Authentication\Domain\Services\AuthService3',
+        'ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface' => 'ZnUser\Authentication\Domain\Services\AuthService',
+        'ZnUser\\Authentication\\Domain\\Interfaces\\Services\\ImitationAuthServiceInterface' => 'ZnUser\\Authentication\\Domain\\Services\\ImitationAuthAuthService',
         'ZnUser\Authentication\Domain\Interfaces\Services\CredentialServiceInterface' => 'ZnUser\Authentication\Domain\Services\CredentialService',
         'ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface' => 'ZnUser\Authentication\Domain\Repositories\Eloquent\CredentialRepository',
         'ZnUser\Authentication\Domain\Interfaces\Repositories\TokenRepositoryInterface' => 'ZnUser\Authentication\Domain\Repositories\Eloquent\TokenRepository',

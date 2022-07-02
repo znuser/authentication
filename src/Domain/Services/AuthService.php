@@ -35,7 +35,7 @@ use ZnCore\Domain\Repository\Traits\RepositoryAwareTrait;
 use ZnCrypt\Base\Domain\Exceptions\InvalidPasswordException;
 use ZnCrypt\Base\Domain\Services\PasswordService;
 
-class AuthService3 implements AuthServiceInterface
+class AuthService implements AuthServiceInterface
 {
 
     use RepositoryAwareTrait;

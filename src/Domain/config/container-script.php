@@ -2,14 +2,14 @@
 
 use Psr\Container\ContainerInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
-use ZnUser\Authentication\Domain\Services\AuthService3;
+use ZnUser\Authentication\Domain\Services\AuthService;
 use ZnUser\Authentication\Domain\Subscribers\SymfonyAuthenticationIdentitySubscriber;
 
 return [
     'singletons' => [
         AuthServiceInterface::class => function (ContainerInterface $container) {
-            /** @var AuthService3 $authService */
-            $authService = $container->get(AuthService3::class);
+            /** @var AuthService $authService */
+            $authService = $container->get(AuthService::class);
             $authService->addSubscriber(SymfonyAuthenticationIdentitySubscriber::class);
             $authService->addSubscriber([
                 'class' => \ZnUser\Authentication\Domain\Subscribers\AuthenticationAttemptSubscriber::class,

@@ -11,6 +11,7 @@ class Bundle extends BaseBundle
     {
         return [
             __DIR__ . '/Rpc/config/account-routes.php',
+            __DIR__ . '/Rpc/config/imitation-auth-routes.php',
         ];
     }
 
@@ -47,6 +48,13 @@ class Bundle extends BaseBundle
         return [
             __DIR__ . '/Domain/config/container.php',
             __DIR__ . '/Domain/config/container-script.php',
+        ];
+    }
+
+    public function rbac(): array
+    {
+        return [
+            __DIR__ . '/Domain/config/rbac.php',
         ];
     }
 }
