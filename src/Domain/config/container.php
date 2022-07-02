@@ -11,7 +11,7 @@ return [
     ],
     'singletons' => [
         PasswordHasherInterface::class => NativePasswordHasher::class,
-        Security::class => \ZnUser\Authentication\Domain\Symfony\Core\Security::class,
+        Security::class => \ZnUser\Authentication\Symfony4\Components\Core\Security::class,
         TokenStorageInterface::class => \Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage::class,
 
         'ZnUser\Authentication\Domain\Interfaces\Services\TokenServiceInterface' => 'ZnUser\Authentication\Domain\Services\JwtTokenService',
