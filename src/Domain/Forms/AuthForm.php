@@ -31,17 +31,17 @@ class AuthForm implements ValidationByMetadataInterface, BuildFormInterface
     {
         $formBuilder
             ->add('login', TextType::class, [
-                'label' => I18Next::t('user', 'auth.attribute.login')
+                'label' => I18Next::t('authentication', 'auth.attribute.login')
             ])
             ->add('password', PasswordType::class, [
-                'label' => I18Next::t('user', 'auth.attribute.password')
+                'label' => I18Next::t('authentication', 'auth.attribute.password')
             ])
             ->add('rememberMe', CheckboxType::class, [
-                'label' => I18Next::t('user', 'auth.remember_me'),
+                'label' => I18Next::t('authentication', 'auth.remember_me'),
                 'required' => false
             ])
             ->add('save', SubmitType::class, [
-                'label' => I18Next::t('user', 'auth.login_action')
+                'label' => I18Next::t('authentication', 'auth.login_action')
             ]);
     }
 

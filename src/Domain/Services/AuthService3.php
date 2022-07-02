@@ -201,7 +201,7 @@ class AuthService3 implements AuthServiceInterface
             $errorCollection = new Collection;
             $ValidationErrorEntity = new ValidationErrorEntity;
             $ValidationErrorEntity->setField('login');
-            $ValidationErrorEntity->setMessage(I18Next::t('user', 'auth.user_not_found'));
+            $ValidationErrorEntity->setMessage(I18Next::t('authentication', 'auth.user_not_found'));
             $errorCollection->add($ValidationErrorEntity);
             $exception = new UnprocessibleEntityException;
             $exception->setErrorCollection($errorCollection);
@@ -229,7 +229,7 @@ class AuthService3 implements AuthServiceInterface
             $this->logger->info('auth verificationPassword');
         } catch (InvalidPasswordException $e) {
             $errorCollection = new Collection;
-            $ValidationErrorEntity = new ValidationErrorEntity('password', I18Next::t('user', 'auth.incorrect_password'));
+            $ValidationErrorEntity = new ValidationErrorEntity('password', I18Next::t('authentication', 'auth.incorrect_password'));
             $errorCollection->add($ValidationErrorEntity);
             $exception = new UnprocessibleEntityException;
             $exception->setErrorCollection($errorCollection);
