@@ -2,7 +2,7 @@
 
 namespace ZnUser\Authentication\Domain\Interfaces\Repositories;
 
-use Illuminate\Support\Collection;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnUser\Authentication\Domain\Entities\CredentialEntity;
 use ZnUser\Authentication\Domain\Enums\CredentialTypeEnum;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
