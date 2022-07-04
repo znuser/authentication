@@ -14,7 +14,7 @@ interface CredentialRepositoryInterface extends CrudRepositoryInterface
     /**
      * @param int $identityId
      * @param array|null $types
-     * @return Collection | CredentialEntity[]
+     * @return \ZnCore\Domain\Collection\Interfaces\Enumerable | CredentialEntity[]
      */
     public function allByIdentityId(int $identityId, array $types = null): Collection;
 
