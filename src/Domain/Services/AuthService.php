@@ -2,38 +2,38 @@
 
 namespace ZnUser\Authentication\Domain\Services;
 
-use ZnCore\Domain\Collection\Libs\Collection;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\NullToken;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Validator\Constraints\Email;
-use ZnUser\Authentication\Domain\Entities\CredentialEntity;
-use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
 use ZnBundle\User\Domain\Entities\User;
-use ZnUser\Authentication\Domain\Enums\AuthEventEnum;
-use ZnUser\Authentication\Domain\Events\AuthEvent;
-use ZnUser\Identity\Domain\Events\IdentityEvent;
-use ZnUser\Authentication\Domain\Forms\AuthForm;
-use ZnUser\Authentication\Domain\Helpers\TokenHelper;
-use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
-use ZnUser\Identity\Domain\Interfaces\Repositories\IdentityRepositoryInterface;
-use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
-use ZnUser\Authentication\Domain\Interfaces\Services\TokenServiceInterface;
 use ZnCore\Base\EventDispatcher\Traits\EventDispatcherTrait;
-use ZnLib\Components\I18Next\Facades\I18Next;
 use ZnCore\Base\Validation\Entities\ValidationErrorEntity;
 use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\Base\Validation\Helpers\ValidationHelper;
 use ZnCore\Contract\Common\Exceptions\NotSupportedException;
 use ZnCore\Contract\User\Exceptions\UnauthorizedException;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnCore\Domain\Repository\Traits\RepositoryAwareTrait;
 use ZnCrypt\Base\Domain\Exceptions\InvalidPasswordException;
 use ZnCrypt\Base\Domain\Services\PasswordService;
+use ZnLib\Components\I18Next\Facades\I18Next;
+use ZnUser\Authentication\Domain\Entities\CredentialEntity;
+use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
+use ZnUser\Authentication\Domain\Enums\AuthEventEnum;
+use ZnUser\Authentication\Domain\Events\AuthEvent;
+use ZnUser\Authentication\Domain\Forms\AuthForm;
+use ZnUser\Authentication\Domain\Helpers\TokenHelper;
+use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
+use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
+use ZnUser\Authentication\Domain\Interfaces\Services\TokenServiceInterface;
+use ZnUser\Identity\Domain\Events\IdentityEvent;
+use ZnUser\Identity\Domain\Interfaces\Repositories\IdentityRepositoryInterface;
 
 class AuthService implements AuthServiceInterface
 {

@@ -3,11 +3,10 @@
 namespace ZnUser\Authentication\Domain\Interfaces\Repositories;
 
 use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnCore\Domain\Collection\Libs\Collection;
-use ZnUser\Authentication\Domain\Entities\CredentialEntity;
-use ZnUser\Authentication\Domain\Enums\CredentialTypeEnum;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 use ZnCore\Domain\Repository\Interfaces\CrudRepositoryInterface;
+use ZnUser\Authentication\Domain\Entities\CredentialEntity;
+use ZnUser\Authentication\Domain\Enums\CredentialTypeEnum;
 
 interface CredentialRepositoryInterface extends CrudRepositoryInterface
 {
@@ -28,7 +27,7 @@ interface CredentialRepositoryInterface extends CrudRepositoryInterface
     public function findOneByCredential(string $credential, string $type = CredentialTypeEnum::LOGIN): CredentialEntity;
 
     public function findOneByCredentialValue(string $credential): CredentialEntity;
-    
+
     /**
      * @param string $validation
      * @param string $type
