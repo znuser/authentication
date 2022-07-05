@@ -2,6 +2,7 @@
 
 namespace ZnUser\Authentication\Domain\Repositories\Eloquent;
 
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Collection\Libs\Collection;
 use ZnUser\Authentication\Domain\Entities\CredentialEntity;
 use ZnUser\Authentication\Domain\Enums\CredentialTypeEnum;
@@ -21,7 +22,7 @@ class CredentialRepository extends \ZnDatabase\Eloquent\Domain\Base\BaseEloquent
         return CredentialEntity::class;
     }
 
-    public function allByIdentityId(int $identityId, array $types = null): Collection
+    public function allByIdentityId(int $identityId, array $types = null): Enumerable
     {
         $query = new Query;
         $query->whereByConditions([

@@ -2,6 +2,7 @@
 
 namespace ZnUser\Authentication\Domain\Interfaces\Repositories;
 
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Collection\Libs\Collection;
 use ZnUser\Authentication\Domain\Entities\CredentialEntity;
 use ZnUser\Authentication\Domain\Enums\CredentialTypeEnum;
@@ -14,9 +15,9 @@ interface CredentialRepositoryInterface extends CrudRepositoryInterface
     /**
      * @param int $identityId
      * @param array|null $types
-     * @return \ZnCore\Domain\Collection\Interfaces\Enumerable | CredentialEntity[]
+     * @return Enumerable | CredentialEntity[]
      */
-    public function allByIdentityId(int $identityId, array $types = null): Collection;
+    public function allByIdentityId(int $identityId, array $types = null): Enumerable;
 
     /**
      * @param string $credential
