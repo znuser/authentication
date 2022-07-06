@@ -4,7 +4,7 @@ namespace ZnUser\Authentication\Domain\Repositories\Eloquent;
 
 use ZnUser\Authentication\Domain\Entities\TokenEntity;
 use ZnUser\Authentication\Domain\Interfaces\Repositories\TokenRepositoryInterface;
-use ZnCore\Domain\Query\Entities\Query;
+use ZnCore\Query\Entities\Query;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 
 class TokenRepository extends BaseEloquentCrudRepository implements TokenRepositoryInterface
