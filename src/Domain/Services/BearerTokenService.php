@@ -7,8 +7,8 @@ use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
 use ZnUser\Authentication\Domain\Interfaces\Repositories\TokenRepositoryInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\TokenServiceInterface;
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
-use ZnCore\Base\Text\Libs\RandomString;
+use ZnCore\Entity\Exceptions\NotFoundException;
+use ZnCore\Text\Libs\RandomString;
 
 class BearerTokenService implements TokenServiceInterface
 {

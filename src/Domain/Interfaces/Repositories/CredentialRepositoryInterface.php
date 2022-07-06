@@ -2,8 +2,8 @@
 
 namespace ZnUser\Authentication\Domain\Interfaces\Repositories;
 
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
+use ZnCore\Collection\Interfaces\Enumerable;
+use ZnCore\Entity\Exceptions\NotFoundException;
 use ZnCore\Domain\Repository\Interfaces\CrudRepositoryInterface;
 use ZnUser\Authentication\Domain\Entities\CredentialEntity;
 use ZnUser\Authentication\Domain\Enums\CredentialTypeEnum;

@@ -5,7 +5,7 @@ namespace ZnUser\Authentication\Domain\Events;
 use Symfony\Contracts\EventDispatcher\Event;
 use ZnUser\Authentication\Domain\Forms\AuthForm;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
-use ZnCore\Base\EventDispatcher\Traits\EventSkipHandleTrait;
+use ZnCore\EventDispatcher\Traits\EventSkipHandleTrait;
 
 class AuthEvent extends Event
 {

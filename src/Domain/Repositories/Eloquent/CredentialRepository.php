@@ -2,7 +2,7 @@
 
 namespace ZnUser\Authentication\Domain\Repositories\Eloquent;
 
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
+use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnUser\Authentication\Domain\Entities\CredentialEntity;
 use ZnUser\Authentication\Domain\Enums\CredentialTypeEnum;

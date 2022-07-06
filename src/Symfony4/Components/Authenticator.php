@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use ZnBundle\User\Domain\Entities\User;
 use ZnBundle\User\Domain\Services\AuthService;
 use ZnCore\Base\Develop\Helpers\DeprecateHelper;
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
+use ZnCore\Entity\Exceptions\NotFoundException;
 use ZnLib\Components\Http\Enums\HttpHeaderEnum;
 
 DeprecateHelper::hardThrow();

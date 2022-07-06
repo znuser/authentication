@@ -6,7 +6,7 @@ use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
 use ZnUser\Authentication\Domain\Forms\AuthForm;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnCore\Base\Arr\Helpers\ArrayHelper;
-use ZnCore\Domain\Entity\Helpers\EntityHelper;
+use ZnCore\Entity\Helpers\EntityHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 use ZnLib\Rpc\Rpc\Base\BaseRpcController;
