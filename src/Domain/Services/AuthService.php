@@ -198,7 +198,7 @@ class AuthService implements AuthServiceInterface
                 $credentialEntity = $this->credentialRepository->findOneByCredential($loginForm->getLogin(), 'login');
             }
         } catch (NotFoundException $e) {
-            $errorCollection = new Collection;
+            $errorCollection = new Collection();
             $ValidationErrorEntity = new ValidationErrorEntity;
             $ValidationErrorEntity->setField('login');
             $ValidationErrorEntity->setMessage(I18Next::t('authentication', 'auth.user_not_found'));
@@ -228,7 +228,7 @@ class AuthService implements AuthServiceInterface
             $this->passwordService->validate($password, $credentialEntity->getValidation());
             $this->logger->info('auth verificationPassword');
         } catch (InvalidPasswordException $e) {
-            $errorCollection = new Collection;
+            $errorCollection = new Collection();
             $ValidationErrorEntity = new ValidationErrorEntity('password', I18Next::t('authentication', 'auth.incorrect_password'));
             $errorCollection->add($ValidationErrorEntity);
             $exception = new UnprocessibleEntityException;
