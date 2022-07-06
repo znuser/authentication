@@ -9,7 +9,7 @@ use ZnCore\Validation\Helpers\UnprocessableHelper;
 use ZnCore\Validation\Helpers\ValidationHelper;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
 use ZnCore\Entity\Exceptions\NotFoundException;
-use ZnLib\Components\I18Next\Facades\I18Next;
+use ZnLib\I18Next\Facades\I18Next;
 use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
 
 class ImitationAuthAuthService extends AuthService implements ImitationAuthServiceInterface

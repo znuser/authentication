@@ -22,7 +22,7 @@ use ZnCore\Query\Entities\Query;
 use ZnCore\Repository\Traits\RepositoryAwareTrait;
 use ZnCrypt\Base\Domain\Exceptions\InvalidPasswordException;
 use ZnCrypt\Base\Domain\Services\PasswordService;
-use ZnLib\Components\I18Next\Facades\I18Next;
+use ZnLib\I18Next\Facades\I18Next;
 use ZnUser\Authentication\Domain\Entities\CredentialEntity;
 use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
 use ZnUser\Authentication\Domain\Enums\AuthEventEnum;
