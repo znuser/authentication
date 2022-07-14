@@ -6,7 +6,7 @@ use ZnUser\Authentication\Domain\Entities\CredentialEntity;
 use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\CredentialServiceInterface;
 use ZnCore\Entity\Exceptions\NotFoundException;
-use ZnCore\Service\Base\BaseService;
+use ZnDomain\Service\Base\BaseService;
 
 class CredentialService extends BaseService implements CredentialServiceInterface
 {
