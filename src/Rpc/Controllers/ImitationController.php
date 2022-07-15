@@ -2,12 +2,12 @@
 
 namespace ZnUser\Authentication\Rpc\Controllers;
 
-use ZnUser\Authentication\Domain\Forms\AuthImitationForm;
-use ZnDomain\Entity\Helpers\EntityHelper;
+use ZnCore\Code\Helpers\PropertyHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 use ZnLib\Rpc\Rpc\Base\BaseRpcController;
 use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
+use ZnUser\Authentication\Domain\Forms\AuthImitationForm;
 use ZnUser\Authentication\Domain\Interfaces\Services\ImitationAuthServiceInterface;
 
 class ImitationController extends BaseRpcController
@@ -36,7 +36,7 @@ class ImitationController extends BaseRpcController
     public function imitation(RpcRequestEntity $requestEntity): RpcResponseEntity
     {
         $form = new AuthImitationForm();
-        EntityHelper::setAttributes($form, $requestEntity->getParams());
+        PropertyHelper::setAttributes($form, $requestEntity->getParams());
         /** @var TokenValueEntity $tokenEntity */
         $tokenEntity = $this->service->tokenByImitation($form);
         $result = [];

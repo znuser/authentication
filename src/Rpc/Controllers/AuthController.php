@@ -2,14 +2,13 @@
 
 namespace ZnUser\Authentication\Rpc\Controllers;
 
-use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
-use ZnUser\Authentication\Domain\Forms\AuthForm;
-use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
-use ZnCore\Arr\Helpers\ArrayHelper;
-use ZnDomain\Entity\Helpers\EntityHelper;
+use ZnCore\Code\Helpers\PropertyHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 use ZnLib\Rpc\Rpc\Base\BaseRpcController;
+use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
+use ZnUser\Authentication\Domain\Forms\AuthForm;
+use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 
 class AuthController extends BaseRpcController
 {
@@ -35,7 +34,7 @@ class AuthController extends BaseRpcController
     public function getTokenByPassword(RpcRequestEntity $requestEntity): RpcResponseEntity
     {
         $form = new AuthForm();
-        EntityHelper::setAttributes($form, $requestEntity->getParams());
+        PropertyHelper::setAttributes($form, $requestEntity->getParams());
         /** @var TokenValueEntity $tokenEntity */
         $tokenEntity = $this->service->tokenByForm($form);
         $result = [
@@ -47,7 +46,7 @@ class AuthController extends BaseRpcController
     public function getToken(RpcRequestEntity $requestEntity): RpcResponseEntity
     {
         $form = new AuthForm();
-        EntityHelper::setAttributes($form, $requestEntity->getParams());
+        PropertyHelper::setAttributes($form, $requestEntity->getParams());
         /** @var TokenValueEntity $tokenEntity */
         $tokenEntity = $this->service->tokenByForm($form);
         $result = [];
