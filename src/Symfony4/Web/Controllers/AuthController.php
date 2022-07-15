@@ -24,7 +24,7 @@ use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnLib\Components\Http\Enums\HttpStatusCodeEnum;
 use ZnLib\Components\Time\Enums\TimeEnum;
 use ZnCore\DotEnv\Domain\Libs\DotEnv;
-use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
+use ZnDomain\Validator\Exceptions\UnprocessibleEntityException;
 use ZnCrypt\Base\Domain\Enums\HashAlgoEnum;
 use ZnLib\Web\Controller\Base\BaseWebController;
 use ZnLib\Web\Controller\Interfaces\ControllerAccessInterface;

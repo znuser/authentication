@@ -5,10 +5,10 @@ namespace ZnUser\Authentication\Domain\Services;
 use ZnUser\Authentication\Domain\Forms\AuthImitationForm;
 use ZnUser\Authentication\Domain\Interfaces\Services\ImitationAuthServiceInterface;
 use Symfony\Component\Validator\Constraints\Email;
-use ZnCore\Validation\Helpers\UnprocessableHelper;
-use ZnCore\Validation\Helpers\ValidationHelper;
+use ZnDomain\Validator\Helpers\UnprocessableHelper;
+use ZnDomain\Validator\Helpers\ValidationHelper;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
-use ZnCore\Entity\Exceptions\NotFoundException;
+use ZnDomain\Entity\Exceptions\NotFoundException;
 use ZnLib\I18Next\Facades\I18Next;
 use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
 

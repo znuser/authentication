@@ -8,7 +8,7 @@ use ZnUser\Authentication\Domain\Enums\AuthEventEnum;
 use ZnUser\Authentication\Domain\Events\AuthEvent;
 use ZnUser\Identity\Domain\Events\IdentityEvent;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
-use ZnCore\Entity\Helpers\EntityHelper;
+use ZnDomain\Entity\Helpers\EntityHelper;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnDomain\EntityManager\Traits\EntityManagerAwareTrait;
 
