@@ -16,7 +16,7 @@ use ZnCore\Contract\Common\Exceptions\NotSupportedException;
 use ZnCore\Contract\User\Exceptions\UnauthorizedException;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
 use ZnCore\Collection\Libs\Collection;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnDomain\Query\Entities\Query;
 use ZnDomain\Repository\Traits\RepositoryAwareTrait;

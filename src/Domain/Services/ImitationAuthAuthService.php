@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints\Email;
 use ZnDomain\Validator\Helpers\UnprocessableHelper;
 use ZnDomain\Validator\Helpers\ValidationHelper;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 use ZnLib\I18Next\Facades\I18Next;
 use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
 

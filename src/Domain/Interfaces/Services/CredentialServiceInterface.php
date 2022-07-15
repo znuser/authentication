@@ -3,7 +3,7 @@
 namespace ZnUser\Authentication\Domain\Interfaces\Services;
 
 use ZnUser\Authentication\Domain\Entities\CredentialEntity;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 
 interface CredentialServiceInterface
 {
