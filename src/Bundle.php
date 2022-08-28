@@ -11,6 +11,7 @@ class Bundle extends BaseBundle
     {
         return [
             __DIR__ . '/Rpc/config/account-routes.php',
+            __DIR__ . '/Rpc/config/auth-identity-routes.php',
             __DIR__ . '/Rpc/config/imitation-auth-routes.php',
         ];
     }
