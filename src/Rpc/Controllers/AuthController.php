@@ -3,19 +3,24 @@
 namespace ZnUser\Authentication\Rpc\Controllers;
 
 use ZnCore\Code\Helpers\PropertyHelper;
+use ZnDomain\Entity\Helpers\EntityHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 use ZnLib\Rpc\Rpc\Base\BaseRpcController;
 use ZnUser\Authentication\Domain\Entities\TokenValueEntity;
 use ZnUser\Authentication\Domain\Forms\AuthForm;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
+use ZnUser\Rbac\Domain\Interfaces\Services\ManagerServiceInterface;
 
 class AuthController extends BaseRpcController
 {
 
-    public function __construct(AuthServiceInterface $authService)
+    private $managerService;
+
+    public function __construct(AuthServiceInterface $authService, ManagerServiceInterface $managerService)
     {
         $this->service = $authService;
+        $this->managerService = $managerService;
     }
 
     public function attributesOnly(): array
@@ -27,7 +32,7 @@ class AuthController extends BaseRpcController
             'identity.statusId',
             'identity.username',
             'identity.roles',
-//            'identity.assignments',
+            'identity.permissions',
         ];
     }
 
@@ -46,12 +51,14 @@ class AuthController extends BaseRpcController
     public function getToken(RpcRequestEntity $requestEntity): RpcResponseEntity
     {
         $form = new AuthForm();
+//        dump($requestEntity->getParams());
         PropertyHelper::setAttributes($form, $requestEntity->getParams());
         /** @var TokenValueEntity $tokenEntity */
         $tokenEntity = $this->service->tokenByForm($form);
         $result = [];
         $result['token'] = $tokenEntity->getTokenString();
-        $result['identity'] = $tokenEntity->getIdentity();
+        $result['identity'] = EntityHelper::toArray($tokenEntity->getIdentity());
+//        $result['identity']['permissions'] = $this->managerService->allNestedItemsByRoleNames($tokenEntity->getIdentity()->getRoles());
         return $this->serializeResult($result);
     }
 }

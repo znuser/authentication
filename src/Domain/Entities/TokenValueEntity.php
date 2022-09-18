@@ -2,6 +2,8 @@
 
 namespace ZnUser\Authentication\Domain\Entities;
 
+use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
+
 class TokenValueEntity
 {
 
@@ -59,7 +61,7 @@ class TokenValueEntity
         $this->identityId = $identityId;
     }
 
-    public function getIdentity()
+    public function getIdentity(): IdentityEntityInterface
     {
         return $this->identity;
     }
