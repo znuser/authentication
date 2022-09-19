@@ -58,7 +58,7 @@ class AuthController extends BaseRpcController
         $result = [];
         $result['token'] = $tokenEntity->getTokenString();
         $result['identity'] = EntityHelper::toArray($tokenEntity->getIdentity());
-//        $result['identity']['permissions'] = $this->managerService->allNestedItemsByRoleNames($tokenEntity->getIdentity()->getRoles());
+        $result['identity']['permissions'] = $this->managerService->allNestedItemsByRoleNames($tokenEntity->getIdentity()->getRoles());
         return $this->serializeResult($result);
     }
 }
